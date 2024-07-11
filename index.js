@@ -25,5 +25,18 @@ pets.forEach(pet => {
     img.src = pet.photo;
     img.alt = `A ${pet.species} named ${pet.name}`;
     const age = new Date().getFullYear() - pet.birthYear;
-    const ageText = decideAgeText(age); 
+    const ageText = decideAgeText(age);
+    clone.querySelector('.age').textContent = ageText;
+
+    clone.querySelector('.species').textContent = pet.species;
+
+    clone.querySelector('.description').textContent = pet.description;
+
+    clone.querySelector('.name').textContent = pet.name
+
+    clone.querySelector('.primary-btn').href = url + pet.id
+
+    wrapper.appendChild(clone);    
 });
+
+document.querySelector('.animals').appendChild(wrapper)
