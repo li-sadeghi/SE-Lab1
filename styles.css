@@ -125,3 +125,15 @@ body{
     padding: 0;
     line-height: 1.5;
 }
+
+.primary-btn{
+    background: linear-gradient(to right, purple, green);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+.primary-btn:hover{
+    background: linear-gradient(to right, rgb(223, 26, 223), rgb(47, 71, 47));
+}
