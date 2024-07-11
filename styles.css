@@ -88,6 +88,22 @@ body{
     overflow: hidden;
     margin-bottom: 10px;
 }
+.animal-card-photo{
+    order: 1;
+    grid-row: 1;
+    overflow: hidden;
+}
+
+.animal-card-photo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+.animal-card:hover img{
+    transform: rotate(20deg) scale(1.4);
+}
 
 .animal-card-text{
     padding: 20px 25px;
