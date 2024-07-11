@@ -1,13 +1,12 @@
-# SE-Lab1
-This is the first lab of the Sharif Software Engineering course.
+# آزمایش اول درس آزمایشگاه مهندسی نرم افزار
 
-## Table of Contents
-- [About](#About)
-- [Developers](#Developers)
+## جدول محتواها
+- [درباره پروژه](#About)
+- [توسعه دهندگان](#Developers)
 
-## About
+## درباره پروژه:
 
-## Developers:
-- [Ali Sadeghi](a.sadeghiali@yahoo.com)
-- [Bozorgmehr Zia](bozorgmehr1381@gmail.com)
-- [Zahra Rahmani](user@example.com)
+## توسعه دهندگان:
+- [علی صادقی](a.sadeghiali@yahoo.com)
+- [بزرگمهر ضیا](bozorgmehr1381@gmail.com)
+- [زهرا رحمانی](Zahra.rahmaniez@gmail.com)
