@@ -40,3 +40,20 @@ pets.forEach(pet => {
 });
 
 document.querySelector('.animals').appendChild(wrapper)
+
+
+const filterBottons = document.querySelectorAll('.filter-nav a');
+filterBottons.forEach(el =>{
+    el.addEventListener('click', e => handleFilterClick(e));
+});
+
+function handleFilterClick(e){
+    let target = e.target;
+    e.preventDefault();
+    filterBottons.forEach(el => {
+        el.classList.remove('active');
+    })
+    target.classList.add('active');
+    
+    filterPets(target.dataset.filter);
+}
