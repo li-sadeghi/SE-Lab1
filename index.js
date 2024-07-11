@@ -57,3 +57,21 @@ function handleFilterClick(e){
     
     filterPets(target.dataset.filter);
 }
+
+function filterPets(species){
+    const allPets = document.querySelectorAll('.animal-card')
+    if (species == 'all') {
+        allPets.forEach(el => {
+            el.style.display = '';
+        })
+    }
+    else {
+        allPets.forEach(el => {
+            if (el.querySelector('.species').textContent == species) {
+                el.style.display = '';
+            } else {
+                el.style.display = 'none';
+            }
+        })
+    }
+}
