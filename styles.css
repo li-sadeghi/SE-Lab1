@@ -45,3 +45,32 @@ body{
     font-size: 1.7rem;
     margin: 0;
 }
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filter-nav a{
+    text-decoration: none;
+    padding: 9px;
+    color: purple;
+    border: 1px solid blue;
+    border-radius: 4px;
+    margin: 4px;
+}
+.filter-nav a:hover{
+    background-color: rgb(173, 126, 173);
+    color: white;
+}
+
+.filter-nav .active{
+    background-color: purple;
+    color: white;
+}
+
+.filter-nav .active:hover{
+    background-color: purple;
+    cursor: default;
+}
