@@ -1,5 +1,60 @@
 # آزمایش اول درس آزمایشگاه مهندسی نرم افزار
 
+## جدول محتواها
+- [درباره پروژه](#درباره-پروژه)
+- [توسعه دهندگان](#توسعه-دهندگان)
+- [گزارش آزمایش](#گزارش-آزمایش)
+- [پرسش ها](#پرسش-ها)
+
+## درباره پروژه:
+این پروژه یک وبسایت کوچکی است که در آن انواع مختلفی از گربه ها و سگ ها و خرگوش ها را به نمایش گذاشته ایم و در آن میتوانید بر اساس فیلترهای موجود، آن ها را به صورت جداگانه و یا همگی با هم مشاهده کنید. وبسایت در آدرس https://li-sadeghi.github.io/SE-Lab1/ قابل مشاهده است.
+
+## توسعه دهندگان:
+- [علی صادقی](a.sadeghiali@yahoo.com)
+- [بزرگمهر ضیا](bozorgmehr1381@gmail.com)
+- [زهرا رحمانی](Zahra.rahmaniez@gmail.com)
+
+## گزارش آزمایش:
+  
+### جزییات پیاده سازی
+در این آزمایش ما یه وبسایت طراحی کردیم که در آدرس زیر قابل مشاهده است:
+https://li-sadeghi.github.io/SE-Lab1/
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/5193aedb-2394-4f6c-a9d7-0419fa4d8070)
+
+در شکل زیر ساختار کلی پروژه را مشاهده می‌کنید که دو branch اصلی دارد: `master` که فرایند اسقرار محصول روی آن انجام می‌شود و `develop` که تغییرات را ابتدا روی آن مرج و تست شده و سپس با pull-request روی master مرج شده و فرایند استقرار بصورت خودکار انجام می‌شود. بقیه branch ها هم با فرمت `feature/[FEATURE_NAME]` برای افزودن ویژگی جدید و یا `fix/[FIX_TYPE]` برای حل مشکلی از یک ویژگی در نظر گرفته شده است.
+![9](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/80b8ee7b-7d32-4a15-9536-0dd260cb0fcc)
+همچنین فایل `gitignore.` برای جلوگیری از push شدن فایلها و فولدرهای local در نظر گرفته شده است:
+![8](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/3ee1c83d-54bf-4fb4-9bbc-42af9bb1576b)
+برای حالت conflict زمان مرج شاخه fix/fix-gitignore به develop پیش آمد که با استفاده از viewer خود github آن را resolve کردیم. دلیل این کانفلیکت این بود که روی برنچ develop قبلا فایل gitignore تغییر کرده بود:
+![2](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/0287cf08-1fb4-4dde-ae20-bc92b8690645)
+اما در برنچ گرفته شده نیز تغییر کرده بود و به کانفلیکت خورده بودند:
+![5](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/38626c0b-affc-40ac-8345-9ac3598a30b6)
+در تصویر زیر نیز resolve آن را مشاهده می کنید:
+![6](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/ed10d65e-dfd6-4de8-88ff-4452f6cca4c4)
+و در نهایت نیز مرج enable شد:
+![7](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/4f04936b-0681-4920-ae7a-d8ec35ca05c5)
+
+در شکل های زیر چند نمونه از دستورات استفاده شده نشان داده شده اند:
+![4](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/0c67a06b-03e0-4afb-9137-0c7466be35d0)
+![3](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/0e29e743-10f2-4cc4-aa60-beff61270c8c)
+
+همچنین برای محافظت از شاخه master یک rule را اضافه کردیم تا هیچ کس حتی administrator نتواند مستقیما به آن پوش کند. برای آن گزینه‌های Require a pull request before merging و Do not allow bypassing the above settings را فعال کردیم.
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/c022a974-6c18-4c60-8494-6bdf108f2e79)
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/498b1223-fccd-4b44-8606-c743401e0d91)
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/4be44ac2-3bd7-41e4-8d65-974425c4323a)
+بعد از آن نتوانستیم مستقیما به master پوش کنیم:
+![1](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/8f5dbb39-4a02-4159-b790-d388cab87536)
+برای افزودن قابلیت به master و develop از pull request استفاده کردیم و بعد از review و approve آن را مرج کردیم.
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/00306a78-b2be-4e96-9f5e-9d760602ebdb)
+
+برای استقرار محصول در github pages از workflow های آماده استفاده کردیم. در آن آدرس root پروژه و شاخه‌ای که باید روی صفحه مستقر شود را مشخص می‌کنیم.
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/8f2e435b-2bab-40b2-8e8f-b5cc3705ced2)
+و پس از آن سایت در آدرس زیر قابل مشاهده است:
+https://li-sadeghi.github.io/SE-Lab1/
+بعد از آن با هر push روی main اکشن مربوطه اجرا می‌شد.
+![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/9bb1297e-9c7f-48b0-8853-ddf6880776d5)
+
+
 ## پرسش ها
 ۱. پوشه‌ی .git چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
 
@@ -34,47 +89,72 @@ description: شامل توضیح کوتاهی درباره مخزن است. ای
 در `pull`، دو عملیات `fetch` و `merge` به صورت همزمان از remote branch به شاخه‌ی local انجام می‌شود.
 
 
-## جدول محتواها
-- [درباره پروژه](#About)
-- [توسعه دهندگان](#Developers)
+۴. تفاوت دستورهای reset و revert و restore و switch و checkout را بیان کنید.
 
-## درباره پروژه:
+در Git، دستورهای `reset`، `revert`، `restore`، `switch` و `checkout` هرکدام برای مدیریت و تغییر وضعیت repository استفاده می‌شوند. تفاوت‌های اصلی این دستورات به شرح زیر است:
+### reset
+- **عملکرد:** شاخه فعلی را به یک commit مشخص برمی‌گرداند و تمامی commit‌های بعد از آن را حذف می‌کند.
+- **کاربرد:** حذف تغییراتی که هنوز commit نشده‌اند و بازگرداندن working directory به وضعیت قبلی.
+### revert
+- **عملکرد:** یک commit جدید برای rollback تغییرات ایجاد می‌کند که تغییرات را معکوس می‌کند ولی سابقه تغییرات اصلی را حفظ می‌کند.
+- **کاربرد:** برگشتن به وضعیت قبلی در حالی که تاریخچه commit‌ها را نگه می‌دارد.
+### restore
+- **عملکرد:** بازیابی فایل‌های working tree از یک index یا commit مشخص.
+- **کاربرد:** بازگرداندن فایل‌های مشخص شده به حالت دلخواه بدون تغییر شاخه فعلی. همچنین بازیابی فایل‌ها از index مربوط به commit دیگری.
+### switch
+- **عملکرد:** جابجایی بین branch‌ها و ایجاد branch‌های جدید.
+- **کاربرد:** جابجا شدن بین branch‌ها به شرطی که تغییرات فایل‌های tracked stash یا commit شده باشند.
+### checkout
+- **عملکرد:** انجام چندین کار مختلف به طور همزمان از جمله جابجایی بین branch‌ها، ایجاد branch‌های جدید و مدیریت تغییرات فایل‌های tracked.
+- **کاربرد:** جابجا شدن بین branch‌ها بدون نیاز به stash یا commit کردن تغییرات موجود که ممکن است به خطا منجر شود.
 
-## توسعه دهندگان:
-- [علی صادقی](a.sadeghiali@yahoo.com)
-- [بزرگمهر ضیا](bozorgmehr1381@gmail.com)
-- [زهرا رحمانی](Zahra.rahmaniez@gmail.com)
-
-## گزارش آزمایش:
-  
-### جزییات پیاده سازی
-در شکل زیر ساختار کلی پروژه را مشاهده می‌کنید که دو branch اصلی دارد: `master` که فرایند اسقرار محصول روی آن انجام می‌شود و `develop` که تغییرات را ابتدا روی آن مرج و تست شده و سپس با pull-request روی master مرج شده و فرایند استقرار بصورت خودکار انجام می‌شود. بقیه branch ها هم با فرمت `feature/[FEATURE_NAME]` برای افزودن ویژگی جدید و یا `fix/[FIX_TYPE]` برای حل مشکلی از یک ویژگی در نظر گرفته شده است.
-![9](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/80b8ee7b-7d32-4a15-9536-0dd260cb0fcc)
-همچنین فایل `gitignore.` برای جلوگیری از push شدن فایلها و فولدرهای local در نظر گرفته شده است:
-![8](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/3ee1c83d-54bf-4fb4-9bbc-42af9bb1576b)
-برای حالت conflict زمان مرج شاخه fix/fix-gitignore به develop پیش آمد که با استفاده از viewer خود github آن را resolve کردیم. دلیل این کانفلیکت این بود که روی برنچ develop قبلا فایل gitignore تغییر کرده بود:
-![2](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/0287cf08-1fb4-4dde-ae20-bc92b8690645)
-اما در برنچ گرفته شده نیز تغییر کرده بود و به کانفلیکت خورده بودند:
-![5](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/38626c0b-affc-40ac-8345-9ac3598a30b6)
-در تصویر زیر نیز resolve آن را مشاهده می کنید:
-![6](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/ed10d65e-dfd6-4de8-88ff-4452f6cca4c4)
-و در نهایت نیز مرج enable شد:
-![7](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/4f04936b-0681-4920-ae7a-d8ec35ca05c5)
-
-در شکل های زیر چند نمونه از دستورات استفاده شده نشان داده شده اند:
-![4](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/0c67a06b-03e0-4afb-9137-0c7466be35d0)
-![3](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/0e29e743-10f2-4cc4-aa60-beff61270c8c)
-
-همچنین برای محافظت از شاخه master یک rule را اضافه کردیم تا هیچ کس حتی administrator نتواند مستقیما به آن پوش کند. برای آن گزینه‌های Require a pull request before merging و Do not allow bypassing the above settings را فعال کردیم.
-![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/c022a974-6c18-4c60-8494-6bdf108f2e79)
-![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/498b1223-fccd-4b44-8606-c743401e0d91)
-![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/4be44ac2-3bd7-41e4-8d65-974425c4323a)
-بعد از آن نتوانستیم مستقیما به master پوش کنیم:
-![1](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/8f5dbb39-4a02-4159-b790-d388cab87536)
-برای افزودن قابلیت به master و develop از pull request استفاده کردیم و بعد از review و approve آن را مرج کردیم.
-![image](https://github.com/li-sadeghi/SE-Lab1/assets/79265024/00306a78-b2be-4e96-9f5e-9d760602ebdb)
+با استفاده صحیح از هر یک از این دستورات، می‌توانید مدیریت بهتری بر روی پروژه‌های خود داشته باشید.
 
 
+۵. منظور از stage یا همان index چیست؟ دستور stash چه کاری را انجام می‌دهد؟
+
+### stage
+- **تعریف:** `stage` محیطی است که تغییراتی که می‌خواهیم commit کنیم در آن قرار می‌گیرند.
+- **کاربرد:** به ما این قابلیت را می‌دهد که تغییرات مشخصی را برای commit در نظر بگیریم. زمانی که تغییرات به مرحله staging اضافه می‌شوند، آماده commit شدن هستند.
+
+### stash
+- **تعریف:** `stash` تغییرات را به صورت موقت در محیط local ذخیره می‌کند.
+- **کاربرد:** برای مواقعی که نیاز داریم کار دیگری انجام دهیم بدون اینکه تغییرات فعلی را commit کنیم. یکی از کاربردهای اصلی آن در دستور `switch` است که در پاسخ قبلی اشاره شد.
+- **نحوه استفاده:** هر زمانی که به تغییرات stashed نیاز داشتیم، می‌توانیم با دستور `git stash pop` آن‌ها را از حالت stashed خارج کنیم و به working directory بازگردانیم.
+
+با استفاده از `stage` و `stash`، می‌توانید تغییرات خود را به صورت موثرتری مدیریت کنید و از تداخل بین وظایف جلوگیری نمایید.
+
+
+۶. مفهوم snapshot به چه معناست؟ ارتباط آن با commit چیست؟
+
+Commit در Git به معنی ثبت وضعیت یک چیز (مثلاً فایل یا فولدر) در زمان مشخصی است. هر commit شامل اطلاعاتی است درباره:
+
+- **چه کسی:** فردی که تغییرات را ایجاد کرده است.
+- **چه تغییری:** نوع و محتوای تغییراتی که اعمال شده است.
+- **کدام قسمت:** محل دقیق تغییرات در فایل یا فولدر.
+
+### Snapshotها در Commit‌ها
+در واقع، هر commit دارای یک snapshot از کل وضعیت repository تا به آن زمان است. به جای اینکه فقط تغییرات جدید را ذخیره کند، هر commit یک تصویر کامل از وضعیت فعلی پروژه را ثبت می‌کند. به عبارتی:
+
+> **Commits are snapshots, not diffs.**
+این ویژگی باعث می‌شود که بتوانیم به راحتی به هر نقطه‌ای از تاریخچه پروژه بازگردیم و وضعیت آن را مشاهده یا بازیابی کنیم.
+
+
+۷. تفاوت‌های local repository و remote repository چیست؟
+
+در Git، دو نوع مخزن (repository) برای مدیریت پروژه‌ها وجود دارد: `local repository` و `remote repository`.
+
+### Local Repository
+- **تعریف:** مخزنی است که فقط در سیستم هر یک از اعضای تیم قرار دارد.
+- **کاربرد:** پروژه فقط بر روی دستگاه‌های محلی اعضای تیم نگهداری می‌شود و تغییرات به صورت محلی مدیریت می‌شوند.
+- **مزیت:** امکان کار به صورت آفلاین و بدون نیاز به اتصال به شبکه.
+
+### Remote Repository
+- **تعریف:** مخزنی است که روی یک سرور در اینترنت یا شبکه داخلی مستقر شده است.
+- **کاربرد:** این مخزن برای همه اعضای تیم قابل دسترسی است و تغییرات می‌توانند با همگام‌سازی (synchronization) بین مخازن محلی و remote انجام شوند.
+- **مزیت:** امکان همکاری و اشتراک‌گذاری تغییرات بین اعضای تیم به صورت آسان و متمرکز.
+
+با استفاده از `remote repository`، اعضای تیم می‌توانند به راحتی تغییرات خود را به اشتراک بگذارند و هماهنگی بیشتری در توسعه پروژه داشته باشند.
 
 
 
